@@ -1,0 +1,90 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Background */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #f5faff, #c3dcf3);
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #1f2937;
+}
+
+/* Header */
+h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* Quiz Form Container */
+#quizForm {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Each Question Block */
+.question-block {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 20px;
+}
+
+.question-block:last-child {
+  border-bottom: none;
+}
+
+/* Question Text */
+.question-block h4 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+/* Options */
+.options label {
+  display: block;
+  margin-bottom: 8px;
+  background: #f9fafb;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.options input[type="radio"] {
+  margin-right: 8px;
+}
+
+.options label:hover {
+  background: #e0f2fe;
+}
+
+/* Submit Button */
+#submitBtn {
+  display: block;
+  margin: 40px auto 0;
+  background-color: #10b981;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submitBtn:hover {
+  background-color: #059669;
+}

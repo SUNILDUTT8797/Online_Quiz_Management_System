@@ -1,0 +1,108 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+  min-height: 100vh;
+  color: #333;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0 10px;
+}
+
+header h2 {
+  font-size: 26px;
+  color: #111827;
+}
+
+/* Logout Button */
+#logoutBtn {
+  padding: 10px 20px;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+#logoutBtn:hover {
+  background-color: #dc2626;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  gap: 20px;
+}
+
+.action-buttons button {
+  background-color: #4f46e5;
+  color: white;
+  padding: 12px 22px;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.action-buttons button:hover {
+  background-color: #4338ca;
+}
+
+/* Quiz List Container */
+#quizList {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Each Quiz Box */
+#quizList div {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.2s ease;
+}
+
+#quizList div:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+#quizList p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+#quizList button {
+  background-color: #10b981;
+  color: white;
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#quizList button:hover {
+  background-color: #059669;
+}

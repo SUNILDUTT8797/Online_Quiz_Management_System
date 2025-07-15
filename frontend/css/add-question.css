@@ -1,0 +1,101 @@
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #4facfe, #00f2fe);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  color: #1e293b;
+}
+
+/* ===== Heading ===== */
+h2 {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#quizIdInfo {
+  color: #f8fafc;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* ===== Form Styling ===== */
+form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+textarea,
+input,
+select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 16px;
+  background: #f8fafc;
+  transition: border 0.3s ease;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+/* ===== Buttons ===== */
+button {
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #4f46e5;
+  transform: translateY(-1px);
+}
+
+button:last-of-type {
+  margin-top: 30px;
+  background-color: #10b981;
+}
+
+button:last-of-type:hover {
+  background-color: #059669;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Questions</title>
+  <link rel="stylesheet" href="css/add-question.css">
+</head>
+<body>
+  <h2>Add Questions to Quiz</h2>
+  <p id="quizIdInfo"></p>
+
+  <form id="questionForm">
+    <textarea id="question" placeholder="Enter Question" required></textarea><br>
+    <input type="text" id="optA" placeholder="Option A" required><br>
+    <input type="text" id="optB" placeholder="Option B" required><br>
+    <input type="text" id="optC" placeholder="Option C" required><br>
+    <input type="text" id="optD" placeholder="Option D" required><br>
+    <select id="correctOption" required>
+      <option value="">Correct Option</option>
+      <option value="a">A</option>
+      <option value="b">B</option>
+      <option value="c">C</option>
+      <option value="d">D</option>
+    </select><br>
+    <button type="submit">Add Question</button>
+  </form>
+
+  <br>
+  <button onclick="window.location.href='teacher-dashboard.html'">Finish & Go to Dashboard</button>
+
+  <script src="js/addQuestions.js"></script>
+</body>
+</html>
