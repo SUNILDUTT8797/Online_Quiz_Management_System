@@ -2,7 +2,7 @@ const quizId = new URLSearchParams(window.location.search).get("quizId");
 document.getElementById("quizInfo").innerText = `Quiz ID: ${quizId}`;
 
 async function loadLeaderboard() {
-  const res = await fetch(`http://localhost:5000/api/quiz/${quizId}/leaderboard`, {
+  const res = await fetch(`${API_CONFIG.QUIZ}/${quizId}/leaderboard`, {
     credentials: "include"
   });
   const data = await res.json();

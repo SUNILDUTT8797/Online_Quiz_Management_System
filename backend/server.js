@@ -12,7 +12,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: "http://localhost:5500",
+  origin: process.env.FRONTEND_URL || "http://localhost:5500",
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type"]
@@ -21,12 +21,12 @@ app.use(cors({
 
 // Session setup
 app.use(session({
-  secret: 'quiz_secret_key',
+  secret: process.env.SESSION_SECRET || 'quiz_secret_key',
   resave: false,
   saveUninitialized: false,
   cookie: {
-    secure: false, // set true only in production with HTTPS
-    sameSite:'lax',
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
     httpOnly: true
   } 
 }));

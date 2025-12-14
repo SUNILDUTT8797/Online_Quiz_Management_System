@@ -32,7 +32,7 @@ function exitFullscreen() {
 
 // Load quiz questions
 async function loadQuiz() {
-  const res = await fetch(`http://localhost:5000/api/quiz/${quizId}/questions`, {
+  const res = await fetch(`${API_CONFIG.QUIZ}/${quizId}/questions`, {
     credentials: "include"
   });
   const data = await res.json();
@@ -71,7 +71,7 @@ document.getElementById("submitBtn").addEventListener("click", async () => {
     }
   });
 
-  const res = await fetch("http://localhost:5000/api/quiz/submit", {
+  const res = await fetch(`${API_CONFIG.QUIZ}/submit`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     credentials: "include",

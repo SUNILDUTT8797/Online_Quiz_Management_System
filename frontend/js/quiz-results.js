@@ -6,7 +6,7 @@ async function loadResults() {
 
   // 1. Get leaderboard
   try {
-    const res = await fetch(`http://localhost:5000/api/quiz/${quizId}/leaderboard`, {
+    const res = await fetch(`${API_CONFIG.QUIZ}/${quizId}/leaderboard`, {
       credentials: "include"
     });
     const data = await res.json();
@@ -39,7 +39,7 @@ async function loadResults() {
 
   // 2. Fetch quiz title (optional)
   try {
-    const titleRes = await fetch("http://localhost:5000/api/quiz/all", { credentials: "include" });
+    const titleRes = await fetch(`${API_CONFIG.QUIZ}/all`, { credentials: "include" });
     const titleData = await titleRes.json();
 
     if (titleRes.ok) {

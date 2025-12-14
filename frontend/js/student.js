@@ -1,6 +1,6 @@
 // ✅ Check session on page load
 (async () => {
-  const res = await fetch("http://localhost:5000/api/auth/check", {
+  const res = await fetch(`${API_CONFIG.AUTH}/check`, {
     credentials: "include"
   });
 
@@ -16,7 +16,7 @@
 const quizList = document.getElementById("quizList");
 
 async function loadQuizzes() {
-  const res = await fetch("http://localhost:5000/api/quiz/all", {
+  const res = await fetch(`${API_CONFIG.QUIZ}/all`, {
     credentials: "include"
   });
 
@@ -42,7 +42,7 @@ function startQuiz(quizId) {
 // Logout handler
 document.getElementById("logoutBtn").addEventListener("click", async () => {
   try {
-    const res = await fetch("http://localhost:5000/api/auth/logout", {
+    const res = await fetch(`${API_CONFIG.AUTH}/logout`, {
       method: "POST",
       credentials: "include"
     });

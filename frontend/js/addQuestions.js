@@ -19,7 +19,7 @@ document.getElementById("questionForm").addEventListener("submit", async (e) => 
   const option_d = document.getElementById("optD").value.trim();
   const correct_option = document.getElementById("correctOption").value;
 
-  const res = await fetch("http://localhost:5000/api/quiz/add-question", {
+  const res = await fetch(`${API_CONFIG.QUIZ}/add-question`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     credentials: "include",

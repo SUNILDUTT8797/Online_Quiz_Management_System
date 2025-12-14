@@ -1,5 +1,5 @@
 // 📦 API base URL
-const api = "http://localhost:5000/api/auth";
+const api = API_CONFIG.AUTH;
 
 // ========================
 // 👨‍🎓 Login Handler

@@ -7,7 +7,7 @@ document.getElementById("createQuizForm").addEventListener("submit", async (e) =
   const time_limit = document.getElementById("timeLimit").value;
 
   // Send POST request to backend
-  const res = await fetch("http://localhost:5000/api/quiz/create", {
+  const res = await fetch(`${API_CONFIG.QUIZ}/create`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     credentials: "include",
