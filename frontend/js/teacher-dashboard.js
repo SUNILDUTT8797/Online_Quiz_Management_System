@@ -1,16 +1,16 @@
-// ✅ Check session on page load
-(async () => {
-  const res = await fetch(`${API_CONFIG.AUTH}/check`, {
-    credentials: "include"
-  });
+// ✅ Check session on page load - TEMPORARILY DISABLED FOR DEPLOYMENT
+// (async () => {
+//   const res = await fetch(`${API_CONFIG.AUTH}/check`, {
+//     credentials: "include"
+//   });
 
-  const data = await res.json();
-  if (!res.ok || !data.user) {
-    // 🔁 If no session, redirect to login
-    alert("Session expired. Please log in again.");
-    window.location.href = "login.html";
-  }
-})();
+//   const data = await res.json();
+//   if (!res.ok || !data.user) {
+//     // 🔁 If no session, redirect to login
+//     alert("Session expired. Please log in again.");
+//     window.location.href = "login.html";
+//   }
+// })();
 
 
 const quizList = document.getElementById('quizList');
