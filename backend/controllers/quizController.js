@@ -94,7 +94,7 @@ export const submitQuiz = async (req, res) => {
     });
 
     await pool.query(
-      'INSERT INTO submissions (student_id, quiz_id, score) VALUES (?, ?, ?)',
+      'INSERT INTO results (student_id, quiz_id, score) VALUES (?, ?, ?)',
       [userId, quiz_id, score]
     );
 
@@ -110,7 +110,7 @@ export const getLeaderboard = async (req, res) => {
   try {
     const [rows] = await pool.query(
       `SELECT u.name, s.score, s.submitted_at
-       FROM submissions s
+       FROM results s
        JOIN users u ON s.student_id = u.id
        WHERE s.quiz_id = ?
        ORDER BY s.score DESC, s.submitted_at ASC
